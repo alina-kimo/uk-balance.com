@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css" class="stylesheet">
+  <title>Sichere und rentable Geldanlage auf Festgeld- / Tagesgelkonten.</title>
+  <link rel="icon" href="./image/logo.svg" type="image/png">
+<style>
+    
+    .column2 {
+    /*flex: 0 0 calc(25% - 20px);*/
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+  .column2 img{
+    width: 180px;
+    height: auto;
+  }
+
+
+
+  /* CONTAINER 7-8 */
+
+
+  .container9 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .image22 {
+    width: 100%;
+    /* height: auto; */
+
+
+    width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: right center; /* Adjusted object-position */
+  display: block;
+  margin: 0 auto;
+  }
+
+  .text-overlay1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    /* text-align: center;
+    padding: 0 20px;
+    max-width: 100%; */
+  }
+
+  .text h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .text h1 img {
+    margin-left: 10px;
+  }
+
+  .line13 {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
+    margin: 20px 0;
+  }
+
+  .flex {
+    /*display: flex;*/
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .column3 {
+    flex: 0 0 100%; /* По умолчанию на узких экранах, занимаем 100% ширины */
+    margin-bottom: 20px;
+  }
+  
+  @media (min-width: 300px) and (max-width: 1500px) {
+      .header-1 {
+          background-size: 1500px 1000px;
+      }
+  }
+
+  @media (min-width: 768px) {
+    /* На более широких экранах используем 50% ширины для колонок */
+    .column3 {
+      flex: 0 0 48%;
+    }
+  }
+
+  .column3 h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .column3 p {
+    font-size: 14px;
+  }
+
+
+
+footer {
+    position: relative; /* Add this to make the text absolute to the footer */
+    background-image: url('image/Bank-of-England-Facade-2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    overflow: hidden;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section h2 {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.footer-section p {
+    font-size: 16px;
+}
+
+.footer-text {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    /*margin-top: 50px;*/
+    text-align: center;
+}
+
+.footer-text p{
+    margin-top: 50px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/* Стили для ссылок */
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Медиа-запрос для адаптивного дизайна */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 50%;
+    }
+}
+
+.footer p:hover {
+    text-decoration: underline;
+    color: #780a0a;
+}
+
+.footer-section h1:hover {
+    text-decoration: underline;
+    color: #780a0a;
+}
+
+
+
+  .container8 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px;
+    background-color: #F6FDFF;
+
+    align-items: flex-start;
+  }
+
+</style>
+
+</head>
+<body>
+
+  
+  <div class="container header-1">
+      <div class="navbar">
+          <a href="index.html">Startseite</a>
+          <a href="festgeldangebote.html">Festgeldangebote</a>
+          <a href="funktioniert.html">So funktioniert´s</a>
+          <a href="einlagensicherung.html">Einlagensicherung</a>
+          <div class="burger-menu">
+              <div class="burger-icon" style="color: white">&#9776;</div>
+              <div class="menu">
+                  <a href="index.html">Startseite</a>
+                  <a href="festgeldangebote.html">Festgeldangebote</a>
+                  <a href="funktioniert.html">So funktioniert´s</a>
+                  <a href="einlagensicherung.html">Einlagensicherung</a>
+              </div>
+          </div>
+      </div>
+    <!--<img src="image/logo.svg" alt="Логотип" class="logo" style="position: absolute; top: 10%; left: 5%; width: 80px;">-->
+    <img src="image/logo.png" alt="Логотип" class="logo" style="position: absolute; top: 75px; left: 5%; width: 120px; background-color: transparent; padding: 0;">
+
+    <!--<img src="image/image1.png" alt="Image 1" class="image1">-->
+    <div class="text-overlay w-90" style="display: flex; flex-direction: column">
+      <!--<div class="main-text"  style="color: #002D62;">-->
+      <div class="main-text mt-70">
+        Warum es lohnend ist, sich Gedanken über eine Festgeldanlage in UK zu machen.
+      </div>
+      <span class="line"></span>
+      <div class="sub-text black-sub-text">
+
+      </div>
+      <div class="sub-text black-sub-text">
+
+      </div>
+        <div class="right-button">
+            <a href="form.html" class="contact-button orange-button" target="_blank">Angebot anfordern</a>
+        </div>
+    </div>
+  </div>
+
+  <div class="container5 flex-top" style="padding: 40px 10px 40px 10px;">
+
+    <!-- <div class="container5 flex-top" style="padding: 0px;">
+      <div class="text-container text-full-line text-justify">
+          <p style="text-align: justify; flex-direction: row;"> -->
+      <div class="text-container text-full-line text-justify">
+          <p>
+              Nicht die Tatsache, dass sich in Großbritannien mit London der weltweite Finanzplatz Nr.2 (Global Financial Centres Index, GFCI) befindet ist hier der Einstieg in die Fragestellung.
+              <br><br>Ausgangspunkt ist vielmehr die Tatsache, dass Geld in Großbritannien „teurer“ ist, als Geld in Deutschland. Sowohl für die Kapitalaufnahme als auch für die Kapitalanlage – z. B. eine Festgeldanlage – fallen in Großbritannien höhere Zinsen als in Deutschland an.
+          </p>
+      </div>
+  </div>
+
+    <div class="container5 flex-top">
+      <div class="text-container">
+          <div class="text">
+              <h1 style="color: #002D62;">Warum ist das so?</h1>
+              <span class="line1"></span>
+          </div>
+          <p class="text-justify" style="text-align: justify;">
+            Der sogenannte <b>Leitzins</b> – richtigerweise <b>Hauptrefinanzierungssatz</b> – beträgt in <b>Großbritannien</b> aktuell <b>5,25 %</b>, in Deutschland hingegen aktuell „nur“ 4,50 %. Der Leitzins bildet den Zinssatz ab, den die nationalen Banken an die Zentralbanken (Bank of England, EZB) zu zahlen haben, falls sie sich dort Liquidität beschaffen, also Geld leihen. 
+              <br><br>Der sogenannte <b>Einlagenzins</b> – auch <b>Einlagefazilität</b> genannt – beträgt in <b>Großbritannien</b> aktuell <b>4,75 %</b>, im Euroraum hingegen aktuell „nur“ 4,00 %. Der Einlagenzins bildet den Zinssatz ab, den die nationalen Banken von den Zentralbanken erhalten, wenn sie dort Geld anlegen.
+              <br><br>Wir sehen, die Antwort auf vorgestellte Frage ist nun ebenso einfach wie nachvollziebar: <b>Ein höherer Leit- und Einlagenzins</b> führt natürlich zu <b>höheren Zinsen auch auf den Kapitalmärkten!</b>
+            </p>
+      </div>
+
+        <div class="text-container">
+            <div class="text">
+                <h1 style="color: #002D62;">Was bedeutet das für eine Festgeldanlage in Großbritannien?</h1>
+                <span class="line1"></span>
+            </div>
+            <p class="text-justify" style="text-align: justify;">
+                Britische Banken bieten daher aktuell für eine Festgeldanlage (fixed term deposit / fixed term savings) bei einer Laufzeit von 12 Monaten und einer Anlage ab 10.000,-- GBP <b>Zinsen ab 4,32% p.a.</b> <a href="www.moneyfacts.co.uk" target="_blank">(www.moneyfacts.co.uk)</a>.
+                <br><br>
+                Dabei wird von den maßgeblichen britischen Banken die Möglichkeit einer Festgeldanlage auch <b>in anderen Währungen, wie dem EUR oder dem USD</b> angeboten. Bei einem solchen <b>Währungskonto</b> werden alle Ein- und Auszahlungen ausschließlich in der jeweiligen Währung – also in EUR oder USD – abgewickelt, so dass den Anleger <b>kein Währungs- bzw. Wechselkursrisiko trifft.</b>
+            </p>
+        </div>
+  </div>
+
+    <div class="container8 flex-top">
+      <div class="text-container">
+          <div class="text">
+              <h1 style="color: #002D62;">Gibt es eine Einlagensicherung in Großbritannien?</h1>
+              <span class="line1"></span>
+          </div>
+          <p class="text-justify" style="text-align: justify;">
+              Das Einlagensicherungssystem in Großbritannien entspricht dem in Deutschland. Bei allen britischen Banken sind Einlagen – und somit auch Festgeldanlagen – je Anleger, je Anlage, je Bank vollständig bis zu einem Betrag in Höhe von <b>85.000,-- GBP (ca. 98.500 EUR) abgesichert. Gemeinschaftskonten privater Anleger</b> sind bis zu einem Betrag von <b>170.000,-- GBP – also knapp 200.000,-- EUR – abgesichert.</b> 
+              <br><br>Alle Banken über die auf dieser Plattform informiert wird, sind dem britischen Einlagensicherungsfond <b>Financial Services Compensation Scheme (FSCS)</b> angeschlossen. Bei diesen Banken ist daher der Verlust eines angelegten Festgeldes im Rahmen der abgesicherten Höhe <b>ausgeschlossen!</b>
+              <!-- <br><br>Ausführliche Information dazu siehe in Kopfzeile (header) <b>„Einlagensicherung“.</b> -->
+            </p>
+      </div>
+  
+      <div class="text-container">
+          <div class="text">
+              <h1 style="color: #002D62;">Wie hoch ist die Abgeltungssteuer in Großbritannien?</h1>
+              <span class="line1"></span>
+          </div>
+          <p class="text-justify" style="text-align: justify;">
+              Die Abgeltungs- oder Quellensteurer (Witholding Tax / WHT) beträgt in Großbritannien grundsätzlich pauschal 20 %. Ausnahmen gelten jedoch u.a. für Zinszahlungen an und von britischen Banken. <b>Auf diese Kapitalerträge – und darunter fallen auch Zinserträge aus Festgeldanlagen - werden in Großbritannien keine Abgeltungssteuern erhoben.</b> Davon unberüht bleibt - im Rahmen der jeweils bestehenden steuerlichen Vorschriften am Wohnsitz des Anlegers – die Verpflichtung des Anlegers zur steuerlichen Erklärung solcher Kapitalerträge am Wohnsitz bestehen.
+          </p>
+      </div>
+  </div>
+
+  <div>
+    <div class="container7">
+      <div class="text">
+        <h1 style="color: #002D62;">Häufige Fragen zu einer Festgeldanlage.</h1>
+        <span class="line1"></span>
+      </div>
+    </div>
+    
+
+    <div class="container8">
+      <div class="text-container text-full-line text-justify" style="text-align: justify;">
+              <h3 class="text-center mpt-0">Festgeld ist eine Geldanlage mit festgelegter Laufzeit, für die Kunde und Geldinstitut einen festen Zins vereinbaren.</h3>
+              <div>
+                  Die Laufzeit kann von einem Monat bis zu mehreren Jahren betragen. Festgeld ist also eine Terminanlage: Der Sparer legt sein Geld bis zu einem bestimmten Datum an und kann bis zu diesem Zeitpunkt nicht mehr darüber verfügen. Er weiß somit, wann das Geld zur Auszahlung fällig ist, und kann mit der im Vertrag vereinbarten Rendite kalkulieren.
+              </div>
+              <h3 class="text-center question" onclick="toggleAnswer('answer2')">Für wen ist das Festgeld geeignet?</h3>
+              <div style="display: none;" id="answer2" class="answer">
+              Da die Zinsen fest vereinbart und garantiert sind, bietet das Festgeld eine hohe Planungssicherheit. Es eignet sich daher für solche Kunden, die eine konservative, <b>sichere Anlage</b> zum Erhalt ihres Vermögens bevorzugen.
+Festgeld eignet sich für eine eher <b>kurzfristige Geldanlage</b>, zum Beispiel, wenn Sie „Geld parken“ möchten, das Sie erst zu einem späteren Zeitpunkt für eine Investition benötigen. Sie können Festgeldanlagen aber auch zum Vermögensaufbau oder als Bestandteil Ihrer Altersvorsorge nutzen. Da Kursschwankungen keine Auswirkungen auf das Festgeld haben, ist es eine besonders sichere Möglichkeit, um sein Geld anzulegen.
+              </div>
+              <h3 class="text-center question" onclick="toggleAnswer('answer3')">Ist das Guthaben auf meinem Festgeldkonto in Großbritannien geschützt?</h3>
+              <div style="display: none;" id="answer3" class="answer">
+                Anlagebeträge sind in Großbritannien mindestens bis zu 85.000,-- GBP (ca. 98.500,-- EUR) je Kunde, je Anlage, je Bank abgesichert. (siehe oben <b>Bottom „Einlagensicherung“</b> mit weiteren Informationen)
+              </div>
+              <h3 class="text-center question" onclick="toggleAnswer('answer4')">Wann kann ich auf das Festgeld zugreifen?</h3>
+              <div style="display: none;" id="answer4" class="answer">
+                Sie erhalten Ihr angelegtes Geld und die darauf gezahlten Zinsen <b>nach Ende der Laufzeit</b> per Gutschrift auf das Referenzkonto, das Sie mit dem jeweiligen Kreditinstitut vereinbart haben. Das Referenzkonto ist in der Regel Ihr normales <a class="link-blue" href="https://www.bafin.de/DE/Verbraucher/Bank/Produkte/Girokonto/girokonto_node.html;jsessionid=74F7B4994DA821418B17160120FF4973.internet951" target="_blank">Girokonto </a>. <br><br>
+                Während der Laufzeit können Sie normalerweise <b>nicht vorzeitig</b> über Ihr Geld verfügen. Lässt das <b>Kreditinstitut</b> dies ausnahmsweise zu, kann sich das zinsschädlich auswirken, oder das Institut verlangt eine sogenannte Vorfälligkeitsentschädigung. Dadurch mindert sich der Ertrag der Anlage. <br> <br>
+                Behalten Sie den Ablaufzeitpunkt Ihrer Festgeldanlage im Blick: Gegebenenfalls müssen Sie die Anlage rechtzeitig vor Ablauf kündigen oder verlängern – je nachdem, was Sie mit Ihrem Anbieter vertraglich vereinbart haben. Wir empfehlen daher bereits bei der Bantragung der Festgeldanlage eine automatische Verlängerung derselben auszuschließen, so daß mit dem Ende der Laufzeit die Bank den Anlagebetrag nebst Zinsen automatisch und direkt ihrem Referenzkonto anweist, ohne das es einer Kündigung der Festgeldanlage bedarf.
+              </div>
+              <h3 class="text-center question" onclick="toggleAnswer('answer5')">Wo kann ich Festgeld anlegen?</h3>
+              <div style="display: none;" id="answer5" class="answer">
+                Festgeld können Sie bei einem Kreditinstitut anlegen. Informationen und Beratung erhalten Sie in den Filialen, online oder telefonisch bei dem jeweiligen Anbieter. Überlegen Sie sich vorher, wie lange und zu welchem Zweck Sie Geld anlegen wollen, und prüfen Sie die Angebote gründlich. Der vereinbarte Zins kann von Institut zu Institut unterschiedlich ausfallen. <br><br>
+                Wenn Sie Ihr Geld nicht in Euro anlegen, bedenken Sie auch, dass ein Fremdwährungsrisiko durch Wechselkursänderungen besteht. Daher kann es sinnvoll sein, die von vielen Banken in Großbritannien angebotene Möglichkeit, die Anlage auch anderen Währungen - wie z.B. <b>in EUR</b> oder USD - zu tätigen, wahrzunehmen. Über ein solches <b>Währungskonto</b> wird der gesamte Zahlungsverkehr (Einzahlung und Auszahlung) sowie die Berechnung und Auskehrung der Zinsertäge gebühren- und kostgenfrei <b>ausschließlich in Euro abgewickelt</b>, so dass den Anleger kein Wechselkursrisiko treffen kann.
+              </div>
+              <h3 class="text-center question" onclick="toggleAnswer('answer6')">Wird das Festgeld besteuert?</h3>
+              <div style="display: none;" id="answer6" class="answer">
+                Die Zinsen, die Ihnen das Kreditinstitut auf das Festgeld zahlt, sind für Anleger mit Wohnsitz in Deutschland steuerpflichtig. Allerdings wird in Großbritannien selbst auf diese Zinserträge keine Abgeltungssteuer (Withholding Tax) erhoben, die Zinserträge somit in Gänze an den Anleger ausgezahlt. Dieser hat diese Kapitalerträge jedoch gemäß der steuerlichen Regeln an seinem Wohnsitz zu erklären und ggfls.dort zu versteuern.
+              </div>
+      </div>
+  </div>
+
+  <div>
+    <div class="container6 background-grey">
+      <div class="text">
+        <h1 style="color: #002D62;">Wie werden die Anbieter von Festgeld in Großbritannien beaufsichtigt?</h1>
+        <span class="line1"></span>
+      </div>
+    </div>
+
+
+  <div class="container6 background-grey pb-20 mpt-0">
+    <div class="text-container text-full-line">
+        <p class="text-justify">
+          Zuständig für die Überwachung des britischen Finazsektors ist die <b>Prudential Regulation Authority (PRA),</b> die die Aufsicht über Banken, Versicherungen und Investmentfonds führt. Die für die Bankenaufsicht zuständige Prudential Regulation Authority untersteht der <b>Bank of England</b>, also der britischen Zenralbank. <br><br>
+          Die Prudential Regulation Authority spielt eine entscheidende Rolle im britischen Finanzdienstleistungssektor. Sie ist Teil der Bank of England und zuständig für die Regulierung und Überwachung von rund 1.500 Banken, Bausparkassen, Kreditgenossenschaften, Versicherungsunternehmen und großen Investmentgesellschaften. <br><br>
+          Gegründet am 1. April 2013, liegt der Zweck der PRA in der Förderung der Sicherheit und Solidität dieser Unternehmen und damit der Verbesserung der Stabilität des britischen Finanzsystems. <br><br>
+          Diese Aufsichtsbehörde gewährleistet somit die Stabilität des britischen Finanzsektors und bietet Verbrauchern eine zusätzliche Schutzschicht
+Kreditinstitute mit Sitz im Grobritannien müssen eine Erlaubnis der Prudential Regulation Authority für das Einlagengeschäft besitzen. Die Prudential Regulation Authority und - ab einer bestimmten Größenordnung - auch die Bank of England, beaufsichtigen die Geldinstitute im Rahmen der Solvenzaufsicht.
+        </p>
+
+        <div class="right-button">
+          <a href="form.html" class="contact-button orange-button" target="_blank">Angebot anfordern</a>
+        </div>
+        <!-- <a href="form.html" class="contact-button orange-button" target="_blank">Angebot anfordern</a> -->
+        <br>
+        <br>
+    </div>
+  </div>
+
+    <footer style="height: 150px;">
+        <div class="background-black"></div>
+        <div class="footer-section">
+            <a href="Impressum.html"><h2>Impressum</h2></a>
+        </div>
+        <div class="footer-section">
+            <a href="Datenschutz.html"><h2>Datenschutzerklärung</h2></a>
+        </div>
+        <div class="footer-text">
+            <p>
+                <b>«Kontakt / Geschäftszeiten»</b>
+                <br>
+                Adresse Rufnummer Geschäftszeiten
+                <br>
+                E-Mail Mo – Fr  11:00 – 18:00 Uhr
+            </p>
+        </div>
+    </footer>
+
+
+</div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const burgerIcon = document.querySelector('.burger-icon');
+        const menu = document.querySelector('.menu');
+
+        burgerIcon.addEventListener('click', function () {
+            menu.style.display = (menu.style.display === 'block' ? 'none' : 'block');
+            burgerIcon.classList.toggle('active')
+        });
+    });
+		function submitForm(event) {
+			// Отправляем форму
+			document.getElementById('form').submit();
+	
+			// После отправки формы перенаправляем пользователя
+			setTimeout(function () {
+				window.location.href = "https://mytestdomenhosting.ru/";
+			}, 1000);
+		}
+
+    function toggleAnswer(id) {
+        var answer = document.getElementById(id);
+        console.log(answer.style.display)
+        if (answer.style.display === 'none') {
+            answer.style.display = 'block';
+        } else {
+            answer.style.display = 'none';
+        }
+    }
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0">
+		<title>Jetzt kostenlos Angebot erhalten.</title>
+
+		<link rel="icon" href="./image/logo.svg" type="image/png">
+
+	<style>
+		body {
+			background-color: white;
+			font-family: "Roboto", sans-serif;
+			text-align: center;
+			background-color: #f8f8f8;
+		}
+
+		/* Styling the Form (Color, Padding, Shadow) */
+		form {
+			background-color: #f8f8f8;
+			max-width: 500px;
+			margin: 20px auto;
+			padding: 30px 20px;
+			/* box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5); */
+            border-radius: 5px;
+            /* text-align: center; */
+		}
+
+		/* Styling form-control Class */
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		/* Styling form-control Label */ 
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		/* Styling form-control input, 
+		select, textarea */
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #a3a3a3;
+			border-radius: 1px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+		}
+
+		.error-message {
+			color: red;
+		}
+
+		/* Styling form-control Radio 
+		button and Checkbox */
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+            border-radius: 5px;
+		}
+
+		/* Styling Button */
+		button {
+            text-align: center;
+			background-color: #F05802;
+			border: 1px solid #d4d4d4;
+			border-radius: 5px;
+			font-family: inherit;
+			font-size: 16px;
+            padding: 15px;
+			display: block;
+			width: 70%;
+			margin-top: 50px;
+			margin-bottom: 20px;
+            color: white;
+			margin-left: 14%;
+		}
+
+		button:hover{
+			background-color: #780a0a;
+		}
+
+		select option:hover {
+			background-color: #F05802;
+		}
+
+		/* убираем нижний ползунок прокрутки */
+		body {
+			overflow-x: hidden;
+			margin: 0 !important;
+			padding: 0;
+		}
+
+		.modalBackground {
+			display: none;
+			background: rgba(0, 0, 0, 0.8);
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			cursor: pointer;
+			/* указываем z-индекс для корректного наслаивания */
+			z-index: 1;
+			max-width: 100%;
+		}
+
+		h1 {
+			margin-top: 0;
+		}
+
+		.modalActive {
+			position: absolute;
+			max-width: 100%;
+			width: 350px;
+			height: auto;
+			top: calc(50% - 250px);
+			left: calc(50% - 175px);
+			border-radius: 10px;
+			background-color: rgb(255, 255, 255);
+			cursor: default;
+			padding: 40px 20px;
+		}
+
+		.modalClose {
+			position: absolute;
+			right: 5px;
+			top: 5px;
+			width: 30px;
+			height: 30px;
+			cursor: pointer;
+		}
+
+		.modalClose img {
+			margin: 3px;
+			width: 24px;
+			height: 24px;
+		}
+
+		.modalWindow {
+			position: relative;
+		}
+
+		.container {
+			padding-top: 30px;
+		}
+		
+		@media (max-width: 600px) {
+			.modalActive {
+				max-width: 80%;
+			}
+			.modalActive {
+				position: relative;
+				top: 0 !important;
+				left: 0 !important;
+				margin: 20px auto;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="modalBackground">
+		<div class="modalActive">
+			<div class="modalClose">
+				<img src="image/close.png" />
+			</div>
+			<div class="modalWindow">
+				<h2 id="modal-title" class="modal-title"> Спасибо! </h2>
+				<p id="modal-body" class="modal-body">
+					Ваша заявка принята в обработку. Мы свяжемся с вами в ближайшее время.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<h1>Jetzt kostenlos Angebot erhalten</h1>
+
+		<!-- Create Form -->
+		<form id="form" onsubmit="submitForm(this)" method="post">
+
+			<!-- Details -->
+			<div class="error-message" id="error-first-name"></div>
+			<div class="form-control">
+				<input type="text" id="first-name" name="name" required placeholder="Name *" />
+			</div>
+
+			<div class="error-message" id="error-last-name"></div>
+			<div class="form-control">
+				<input type="text" id="last-name" name="surname" required placeholder="Nachname *" />
+			</div>
+
+			<div class="error-message" id="error-email"></div>
+			<div class="form-control">
+				<input type="email" id="email" name="email" required placeholder="E-mail *" />
+			</div>
+
+			<div class="error-message" id="error-country-code"></div>
+			<div class="form-control">
+				<input type="text" id="country-code" name="code_country" required placeholder="Ländervorwahl *" />
+			</div>
+
+			<div class="error-message" id="error-phone"></div>
+			<div class="form-control">
+				<input type="text" id="phone" name="phone_number" required placeholder="Telefon *" />
+			</div>
+
+
+			<div>
+				<!--<p style="font-size: 14px; text-align: left;">* Diese Felder müssen ausgefüllt werden.<br><br><br>-->
+				<p style="font-size: 14px; text-align: left;">* Pflichtfeld<br><br><br>
+			</div>
+
+			<div class="error-message" id="error-not-required-sum-investments"></div>
+			<div class="form-control">
+				<label for="not_required_sum_investments">Unverbindliche Anlagesumme</label>
+				<div class="custom-select">
+					<select id="not_required_sum_investments" name="not_required_sum_investments">
+						<option value="Mehr Optionen">Optionen</option>
+						<option value="10 000 - 50 000 EUR">10 000 - 50 000 EUR</option>
+						<option value="50 000 - 100 000 EUR">50 000 - 100 000 EUR</option>
+						<option value="Höher">höher</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="error-message" id="error-not-required-term"></div>
+			<div class="form-control">
+				<label for="not_required_term">Unverbindliche Laufzeit</label>
+				<div class="custom-select">
+					<select id="not_required_term" name="not_required_term">
+						<option value="Mehr Optionen">Optionen</option>
+						<option value="Bis 12 Monate">bis 12 Monate</option>
+						<option value="Bis 24 Monate">bis 24 Monate</option>
+						<option value="Länger">länger</option>
+					</select>
+				</div>
+			</div>
+
+			<div>
+				<!--<p style="text-align: left;">Die erbetenen Angaben werden zur Bearbeitung Ihrer Anfragen benötigt. Die Zusendung der Vergleichsangebote ist kosten- und gebührenfrei.</p>-->
+				<br><p style="text-align: justify;">Die erbetenen Angaben werden zur Bearbeitung Ihrer Anfragen benötigt. Die Zusendung der Vergleichsangebote ist kosten- und gebührenfrei.</p>
+			</div>
+
+			<button type="submit" onclick="submitForm(event)">
+				Jetzt Angebot anfordern
+			</button>
+		</form>
+	</div>
+	
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			fetchDataAndPopulateSelects();
+		});
+
+		const scrollbarWidth = parseInt(window.innerWidth) - parseInt(document.documentElement.clientWidth);
+
+		const modalBackground = document.getElementsByClassName("modalBackground")[0];
+		const modalClose = document.getElementsByClassName("modalClose")[0];
+		const modalActive = document.getElementsByClassName("modalActive")[0];
+		const modalTitle = document.getElementById("modal-title");
+		const modalBody = document.getElementById("modal-body");
+
+		function openModal() {
+			// делаем модальное окно видимым
+			modalBackground.style.display = "block";
+
+			// позиционируем наше окно по середине, где 175 - половина ширины модального окна
+			modalActive.style.left = "calc(50% - " + (175 - scrollbarWidth / 2) + "px)";
+		}
+
+
+		modalClose.addEventListener("click", function () {
+			modalBackground.style.display = "none";
+		});
+
+		modalBackground.addEventListener("click", function (event) {
+			if (event.target === modalBackground) {
+				modalBackground.style.display = "none";
+			}
+		});
+
+		function fetchDataAndPopulateSelects() {
+			fetch('http://51.20.254.142/api/v1/form/dropdown/')
+					.then(response => {
+						if (!response.ok) {
+							throw new Error('Network response was not ok');
+						}
+						return response.json();
+					})
+					.then(data => {
+						clearSelectOptions('not_required_sum_investments');
+						clearSelectOptions('not_required_term');
+
+						populateSelect('not_required_sum_investments', data.map(item => item.not_required_sum_investments));
+
+						populateSelect('not_required_term', data.map(item => item.not_required_term));
+					})
+					.catch(error => {
+						console.error('Error fetching data:', error.message);
+					});
+		}
+
+		function clearSelectOptions(selectId) {
+			var selectElement = document.getElementById(selectId);
+			while (selectElement.options.length > 0) {
+				selectElement.remove(0);
+			}
+		}
+
+		function populateSelect(selectId, options) {
+			var selectElement = document.getElementById(selectId);
+
+			options.forEach(optionText => {
+				var option = document.createElement('option');
+				option.text = optionText;
+				selectElement.add(option);
+			});
+		}
+
+		function submitForm(event) {
+			event.preventDefault();
+
+			var firstName = document.getElementById('first-name').value;
+			var lastName = document.getElementById('last-name').value;
+			var email = document.getElementById('email').value;
+			var countryCode = document.getElementById('country-code').value;
+			var phone = document.getElementById('phone').value;
+
+			var sum_investments = document.getElementById('not_required_sum_investments').value;
+			var required_term = document.getElementById('not_required_term').value;
+
+			var isValid = true;
+
+			if (firstName === '' || firstName.length > 70) {
+				highlightError('first-name', 'Der Name ist erforderlich und sollte weniger als 70 Zeichen lang sein');
+				isValid = false;
+			} else {
+				removeHighlight('first-name');
+			}
+
+			if (lastName === '' || lastName.length > 70) {
+				highlightError('last-name', 'Der Nachname ist erforderlich und sollte weniger als 70 Zeichen lang sein');
+				isValid = false;
+			} else {
+				removeHighlight('last-name');
+			}
+
+			let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+			if (email === '' || email.length > 254 || !emailRegex.test(email)) {
+				highlightError('email', 'Geben Sie eine gültige E-Mail-Adresse ein (bis zu 254 Zeichen)');
+				isValid = false;
+			} else {
+				removeHighlight('email');
+			}
+
+			if (countryCode === '' || countryCode.length > 5) {
+				highlightError('country-code', 'Der Ländercode ist erforderlich und sollte weniger als 5 Zeichen lang sein');
+				isValid = false;
+			} else {
+				removeHighlight('country-code');
+			}
+
+			if (phone === '' || phone.length > 20) {
+				highlightError('phone', 'Die Telefonnummer ist erforderlich und sollte weniger als 20 Zeichen lang sein');
+				isValid = false;
+			} else {
+				removeHighlight('phone');
+			}
+
+			if (isValid) {
+				let data = {
+					name: firstName,
+					surname: lastName,
+					email: email,
+					code_country: countryCode,
+					phone_number: phone,
+					drop_down_info: [{
+						not_required_sum_investments: sum_investments,
+						not_required_term: required_term
+					}]
+				}
+
+				sendData(data)
+			} else {
+				modalTitle.innerHTML = "Eingabe Fehler.";
+				modalBody.innerHTML = "Bitte füllen Sie alle erforderlichen Felder korrekt aus.";
+				openModal();
+			}
+		}
+
+		function highlightError(fieldId, errorMessage) {
+			var field = document.getElementById(fieldId);
+			field.style.border = '1px solid red';
+
+			var errorElement = document.getElementById('error-' + fieldId);
+			errorElement.textContent = errorMessage;
+		}
+
+		function removeHighlight(fieldId) {
+			var field = document.getElementById(fieldId);
+			field.style.border = '';
+
+			var errorElement = document.getElementById('error-' + fieldId);
+			errorElement.textContent = '';
+		}
+
+		/*function clearError(errorId) {
+			var errorElement = document.getElementById(errorId);
+			errorElement.textContent = '';
+		}*/
+
+		function sendData(data) {
+			fetch('http://51.20.254.142/api/v1/form/form/', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify(data),
+			})
+			.then(response => {
+				if (!response.ok) {
+					throw new Error('Too many requests, please try again');
+				}
+				return response.json();
+			})
+			.then(responseData => {
+				modalTitle.innerHTML = "Daten erfolgreich gesendet.";
+				modalBody.innerHTML = "";
+				openModal();
+				alert('Daten erfolgreich gesendet.');
+			})
+			.catch(error => {
+				modalTitle.innerHTML = "Ein Fehler ist aufgetreten.";
+				modalBody.innerHTML = "Beim Senden der Daten ist ein Fehler aufgetreten: " + error.message;
+				openModal();
+			});
+		}
+	</script>
+</body>
+</html>
