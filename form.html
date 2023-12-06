@@ -181,6 +181,8 @@
 
 	<div class="container">
 		<h1>Jetzt kostenlos Angebot erhalten</h1>
+		<br>
+		<p>Zurück zur Startseite <a href="index.html">http://uk-balance.com/</a></p>
 
 		<!-- Create Form -->
 		<form id="form" onsubmit="submitForm(this)" method="post">
@@ -287,7 +289,7 @@
 		});
 
 		function fetchDataAndPopulateSelects() {
-			fetch('http://51.20.254.142/api/v1/form/dropdown/')
+			fetch('http://172.86.96.158:8800/api/v1/form/dropdown/')
 					.then(response => {
 						if (!response.ok) {
 							throw new Error('Network response was not ok');
@@ -417,7 +419,7 @@
 		}*/
 
 		function sendData(data) {
-			fetch('http://51.20.254.142/api/v1/form/form/', {
+			fetch('http://172.86.96.158:8800/api/v1/form/form/', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
